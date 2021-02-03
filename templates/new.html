@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>
+      Nomad News |
+        New
+    </title>
+    <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet">
+  </head>
+  <body cz-shortcut-listen="true">
+    <header>
+      <h1></h1>
+      <div>
+        Order by:
+          <a href="/?order_by=popular">Popular</a>
+        |
+          <strong>New</strong>
+      </div>
+    </header>
+    <main>
+      {% for list in lists%}
+        <div>
+          <div>
+            <a href ="{{list.id_url}}">
+              <h3>{{list.title}}</h3>
+            </a>
+            '('
+            <a href = {{list.url}} target="_blan1">{{list.url}}</a>
+            ')'
+          </div>
+          <div>
+            {{list.points}} points | By: {{ list.author}} | {{list.objectID}} comments
+          </div>
+        </div>
+        <hr>
+      {%endfor%}
+    </main>
+  </body>
+</html>
